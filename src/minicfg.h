@@ -2,6 +2,7 @@
 #include <vector>
 #include <sstream>
 #include <iostream>
+#include <fstream>
 
 class CfgLine {
     public:
@@ -12,13 +13,16 @@ class CfgLine {
     
 };
 
-class CfgReader {
+class CfgParser {
     public:
     std::vector<CfgLine> lines;
     std::string filename;
-    CfgReader(std::string filename);
-
+    CfgParser(std::string filename, std::vector<CfgLine> serializableLines);
+    std::string get(std::string key);
+    int deserialize();
 };
+
+
 
 
 
