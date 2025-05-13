@@ -19,6 +19,7 @@ std::string CfgParser::get(std::string key) {
 
 int CfgParser::deserialize() {
     // TODO: implement reading file line by line to get data
+    return 0;
 }
 
 CfgLine::CfgLine(std::string line) {
