@@ -1,9 +1,10 @@
 #include "minicfg.h"
 
-CfgParser::CfgParser(std::string filename, std::vector<CfgLine> serializableLines = {}) {
+CfgParser::CfgParser(std::string filename, std::vector<CfgLine> serializableLines) {
     this->filename = filename;
     this->lines = serializableLines;
 }
+
 
 std::string CfgParser::get(std::string key) {
     if (this->lines.empty()) {
