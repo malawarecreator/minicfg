@@ -17,9 +17,10 @@ class CfgParser {
     public:
     std::vector<CfgLine> lines;
     std::string filename;
-    CfgParser(std::string filename, std::vector<CfgLine> serializableLines);
+    CfgParser(std::string filename, std::vector<CfgLine> serializableLines = {});
     std::string get(std::string key);
     int deserialize();
+    int serialize();
 };
 
 
