@@ -40,13 +40,13 @@ int CfgParser::deserialize() {
 int CfgParser::serialize() {
 
     std::ofstream file(this->filename);
-    // if the list is empty the data cannot be serializable
+    // if the list is empty, the data cannot be serializable
     if (this->lines.size() == 0) {
         return 1;
     }
     if (file.is_open()) {
         for (int i = 0; i < this->lines.size(); i++) {
-            file << this->lines[i].line;
+            file << this->lines[i].line << std::endl;
         }
     } else {
         return 1;
