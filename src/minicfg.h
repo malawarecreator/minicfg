@@ -27,7 +27,7 @@ class CfgParser {
 
 
 
-std::vector<std::string> splitString(const std::string& str, char delimiter) {
+inline std::vector<std::string> splitString(const std::string& str, char delimiter) {
     std::vector<std::string> tokens;
     std::stringstream ss(str);
     std::string token;
